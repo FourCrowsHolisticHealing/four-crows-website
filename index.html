@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Four Crows Holistic Healing</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fbf8f2;
+      color: #4b4650;
+      line-height: 1.7;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      color: #604b76;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    nav {
+      background: #fffdf9;
+      padding: 16px 7%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+      border-bottom: 1px solid #eee6df;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      width: 190px;
+      max-width: 90%;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: #4b4650;
+      font-size: 15px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #8b749e;
+      color: white !important;
+      padding: 13px 27px;
+      border-radius: 30px;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background: #715a85;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 110px 20px 105px;
+      background: linear-gradient(
+        135deg,
+        #fbf8f2 0%,
+        #f3edf4 55%,
+        #e9eee3 100%
+      );
+    }
+
+    .hero h1 {
+      font-size: 62px;
+      line-height: 1.08;
+      margin: 0 0 15px;
+    }
+
+    .hero-subtitle {
+      font-family: Georgia, serif;
+      font-style: italic;
+      color: #7d8b70;
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 670px;
+      margin: 0 auto 30px;
+      font-size: 18px;
+    }
+
+    .about {
+      max-width: 1100px;
+      margin: auto;
+      padding: 90px 25px;
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-photo {
+      text-align: center;
+    }
+
+    .about-photo img {
+      width: 315px;
+      height: 315px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #a8b39b;
+      box-shadow: 0 12px 28px rgba(77, 62, 86, 0.15);
+    }
+
+    .about-text h2 {
+      font-size: 44px;
+      margin: 0 0 5px;
+    }
+
+    .credentials {
+      color: #7a648d;
+      font-weight: bold;
+      letter-spacing: 1.1px;
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+
+    .services-section {
+      background: #f2ebf2;
+      padding: 90px 25px;
+      text-align: center;
+    }
+
+    .services-section h2 {
+      font-size: 44px;
+      margin: 0 0 8px;
+    }
+
+    .services-intro {
+      max-width: 680px;
+      margin: 0 auto 45px;
+    }
+
+    .services {
+      max-width: 1180px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px;
+    }
+
+    .service {
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid #e2d9e4;
+      border-radius: 18px;
+      padding: 32px 20px;
+      min-height: 300px;
+      box-shadow: 0 6px 15px rgba(75, 60, 85, 0.06);
+    }
+
+    .service-icon {
+      font-size: 40px;
+      color: #7e8c72;
+      margin-bottom: 10px;
+    }
+
+    .service h3 {
+      font-size: 21px;
+      margin: 0 0 15px;
+    }
+
+    .contact {
+      background: #eadfeb;
+      text-align: center;
+      padding: 85px 25px;
+    }
+
+    .contact h2 {
+      font-size: 42px;
+      margin: 0 0 8px;
+    }
+
+    .contact-options {
+      max-width: 900px;
+      margin: 40px auto 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .contact-card {
+      background: rgba(255, 255, 255, 0.45);
+      border-radius: 18px;
+      padding: 30px 20px;
+    }
+
+    .contact-icon {
+      width: 65px;
+      height: 65px;
+      margin: 0 auto 13px;
+      border-radius: 50%;
+      background: #8b749e;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+    }
+
+    .contact-card h3 {
+      margin-bottom: 5px;
+    }
+
+    .contact-card a {
+      color: #604b76;
+      font-weight: bold;
+    }
+
+    .disclaimer {
+      background: #fffdf9;
+      padding: 35px 25px;
+      text-align: center;
+      color: #6c6670;
+      font-size: 13px;
+    }
+
+    .disclaimer p {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    footer {
+      background: #9aa38c;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 950px) {
+      nav {
+        justify-content: center;
+      }
+
+      .nav-links {
+        justify-content: center;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+      }
+
+      .about {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .services {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .logo {
+        width: 220px;
+      }
+
+      .nav-links {
+        gap: 13px;
+        justify-content: center;
+      }
+
+      .hero {
+        padding: 75px 20px;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .hero-subtitle {
+        font-size: 20px;
+      }
+
+      .about-photo img {
+        width: 240px;
+        height: 240px;
+      }
+
+      .services {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-options {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <img
+      src="Four Crows Logo.jpg"
+      alt="Four Crows Holistic Healing"
+      class="logo"
+    >
+
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+
+      <a
+        class="button"
+        href="https://TheAlignedCollective.as.me/Maxine"
+        target="_blank"
+        rel="noopener"
+      >
+        Book a Session
+      </a>
+    </div>
+  </nav>
+
+  <section class="hero" id="home">
+    <h1>
+      Healing for Mind,<br>
+      Body &amp; Spirit
+    </h1>
+
+    <div class="hero-subtitle">
+      Reiki • Intuition • Energy • Connection
+    </div>
+
+    <p>
+      A peaceful space to relax, restore, reconnect,
+      and support your natural sense of balance and well-being.
+    </p>
+
+    <a
+      class="button"
+      href="https://TheAlignedCollective.as.me/Maxine"
+      target="_blank"
+      rel="noopener"
+    >
+      Book a Session
+    </a>
+  </section>
+
+  <section class="about" id="about">
+    <div class="about-photo">
+      <img
+        src="thumbnail2.jpg"
+        alt="Maxine of Four Crows Holistic Healing"
+      >
+    </div>
+
+    <div class="about-text">
+      <h2>Hello, I'm Maxine</h2>
+
+      <div class="credentials">
+        HOLY FIRE® REIKI PRACTITIONER • 200 RYT YOGA INSTRUCTOR • PSYCHIC MEDIUM
+      </div>
+
+      <p>
+        I am a Usui Holy Fire® Reiki Master Practitioner,
+        200 RYT Yoga Instructor, and practicing Psychic Medium.
+      </p>
+
+      <p>
+        My work blends Reiki, intuition, and spiritual connection
+        to create a nurturing and grounded space for healing,
+        relaxation, and self-discovery.
+      </p>
+
+      <p>
+        Whether you are seeking relaxation, emotional support,
+        spiritual guidance, or a deeper sense of connection,
+        I offer sessions designed to meet you where you are.
+      </p>
+    </div>
+  </section>
+
+  <section class="services-section" id="services">
+    <h2>Services</h2>
+
+    <p class="services-intro">
+      Each offering is designed to support relaxation,
+      connection, mindfulness, and your individual healing journey.
+    </p>
+
+    <div class="services">
+
+      <div class="service">
+        <div class="service-icon">✧</div>
+        <h3>Intuitive Reiki Healing</h3>
+        <p>
+          A personalized Reiki session combining energy healing
+          with intuitive impressions and guidance that may arise
+          during your session.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="service-icon">❦</div>
+        <h3>Distance Reiki</h3>
+        <p>
+          Reiki healing offered remotely so you can receive
+          supportive, relaxing energy from the comfort
+          of your own space.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="service-icon">✿</div>
+        <h3>Reiki Shares</h3>
+        <p>
+          A supportive group experience centered around
+          sharing Reiki, relaxation, connection,
+          and community.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="service-icon">☾</div>
+        <h3>Psychic Mediumship</h3>
+        <p>
+          One-on-one intuitive and mediumship sessions
+          focused on spiritual connection, guidance,
+          and messages that may come through.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="service-icon">❁</div>
+        <h3>Yoga Flow Classes</h3>
+        <p>
+          Grounding yoga flow classes designed to support
+          movement, mindfulness, flexibility,
+          strength, and calm.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Ready to Begin Your Healing Journey?</h2>
+
+    <p>
+      Book a session online or reach out directly with any questions.
+    </p>
+
+    <div class="contact-options">
+
+      <div class="contact-card">
+        <div class="contact-icon">✦</div>
+        <h3>Book a Session</h3>
+
+        <a
+          href="https://TheAlignedCollective.as.me/Maxine"
+          target="_blank"
+          rel="noopener"
+        >
+          Schedule Online
+        </a>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-icon">☎</div>
+        <h3>Call Me</h3>
+
+        <a href="tel:5853147905">
+          585-314-7905
+        </a>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-icon">✉</div>
+        <h3>Email Me</h3>
+
+        <a href="mailto:mc1436@aol.com">
+          mc1436@aol.com
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="disclaimer">
+    <p>
+      Reiki and intuitive services are complementary wellness practices
+      and are not intended to diagnose, treat, cure, or replace medical
+      or mental health care.
+    </p>
+  </section>
+
+  <footer>
+    © 2026 Four Crows Holistic Healing • All Rights Reserved
+  </footer>
+
+</body>
+</html>
