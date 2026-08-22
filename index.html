@@ -1,830 +1,557 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta name="description" content="Four Crows Holistic Healing — Intuitive Reiki Healing, Distance Reiki, Reiki Shares, Psychic Mediumship, and Yoga.">
   <title>Four Crows Holistic Healing</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
-
-    * {
-      box-sizing: border-box;
+    :root {
+      --cream: #fffaf3;
+      --cream2: #fffdf9;
+      --lavender: #eee4f0;
+      --lavender2: #ddcde2;
+      --purple: #5d4675;
+      --purple2: #8b73a0;
+      --sage: #98a38c;
+      --sage-dark: #71806a;
+      --ink: #3f3941;
+      --soft-ink: #625c63;
+      --line: rgba(98,74,119,.18);
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
-      color: #514b51;
-      background: #fbf8f2;
+      color: var(--ink);
+      background: var(--cream);
       font-family: "Montserrat", Arial, sans-serif;
       line-height: 1.7;
     }
 
-    h1,
-    h2,
-    h3 {
-      font-family: "Cormorant Garamond", Georgia, serif;
-      color: #675276;
+    h1, h2, h3 {
       margin-top: 0;
+      color: var(--purple);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-weight: 600;
     }
 
-    a {
-      text-decoration: none;
+    a { color: inherit; text-decoration: none; }
+
+    .shell {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
     }
 
-
-    /* NAVIGATION */
-
-  .topbar {
-  background: rgba(255, 253, 249, 0.96);
-  border-bottom: 1px solid #eee7df;
-  padding: 15px 7%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-}
-           
+    /* HEADER */
+    header {
+      background: rgba(255,253,249,.97);
+      border-bottom: 1px solid #eee7df;
     }
 
-    .logo {
-      width: 210px;
-      max-width: 42%;
+    .nav {
+      min-height: 112px;
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand img {
       display: block;
+      width: 195px;
+      height: 88px;
+      object-fit: contain;
+      object-position: left center;
     }
 
-    .nav-links {
+    .links {
       display: flex;
       align-items: center;
-      gap: 24px;
+      justify-content: flex-end;
+      gap: 25px;
       flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .nav-links a {
-      color: #554e56;
       font-size: 14px;
       font-weight: 500;
     }
 
-    .nav-links a:hover {
-      color: #806b8e;
-    }
+    .links a:not(.btn):hover { color: var(--purple2); }
 
-
-    /* BUTTONS */
-
-    .button {
-      display: inline-block;
-      background: #8b759a;
-      color: white !important;
-      padding: 13px 28px;
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 12px 25px;
       border-radius: 999px;
+      color: #fff !important;
+      background: linear-gradient(135deg, #82689a, #6e5088);
+      box-shadow: 0 8px 24px rgba(92,70,116,.18);
       font-weight: 600;
-      box-shadow: 0 6px 15px rgba(110, 85, 125, 0.18);
-      transition: 0.25s ease;
+      transition: transform .2s ease, box-shadow .2s ease;
     }
 
-    .button:hover {
-      background: #745f84;
+    .btn:hover {
       transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(92,70,116,.25);
     }
-
 
     /* HERO */
-
     .hero {
-      min-height: 620px;
-      padding: 110px 25px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-
-      background:
-        radial-gradient(circle at 15% 20%, rgba(200, 211, 190, 0.55), transparent 30%),
-        radial-gradient(circle at 85% 30%, rgba(218, 200, 223, 0.55), transparent 32%),
-        linear-gradient(
-          145deg,
-          #fffaf3 0%,
-          #f7f0f5 48%,
-          #eef2e9 100%
-        );
-    }
-
-    .hero::before {
-      content: "❦";
-      position: absolute;
-      left: 8%;
-      bottom: 6%;
-      font-size: 140px;
-      color: rgba(126, 143, 111, 0.10);
-      transform: rotate(-18deg);
-    }
-
-    .hero::after {
-      content: "☾";
-      position: absolute;
-      right: 8%;
-      top: 12%;
-      font-size: 110px;
-      color: rgba(116, 91, 132, 0.10);
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 850px;
-    }
-
-    .hero-small {
-      color: #7f8d73;
-      letter-spacing: 3px;
-      font-size: 13px;
-      font-weight: 600;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-    }
-
-    .hero h1 {
-      font-size: clamp(48px, 7vw, 78px);
-      line-height: 0.98;
-      margin-bottom: 20px;
-      font-weight: 600;
-    }
-
-    .hero-subtitle {
-      font-family: "Cormorant Garamond", Georgia, serif;
-      font-size: 27px;
-      font-style: italic;
-      color: #7d8b72;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      max-width: 650px;
-      margin: 0 auto 30px;
-      font-size: 17px;
-    }
-
-
-    /* SECTION TITLES */
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 45px;
-    }
-
-    .section-title h2 {
-      font-size: 48px;
-      margin-bottom: 5px;
-    }
-
-    .section-title p {
-      max-width: 650px;
-      margin: auto;
-    }
-
-
-    /* ABOUT */
-
-    .about-section {
-      background: #fffdf8;
-      padding: 95px 25px;
-    }
-
-    .about {
-      max-width: 1050px;
-      margin: auto;
+      min-height: 590px;
       display: grid;
-      grid-template-columns: 360px 1fr;
-      gap: 75px;
-      align-items: center;
-    }
-
-    .photo-wrap {
+      place-items: center;
       text-align: center;
-      position: relative;
+      background-image: linear-gradient(rgba(255,250,243,.18), rgba(255,250,243,.08)), url("hero-bg.svg");
+      background-size: cover;
+      background-position: center;
+      border-bottom: 1px solid rgba(91,72,108,.08);
     }
 
-    .photo-wrap::before {
-      content: "";
-      position: absolute;
-      width: 310px;
-      height: 310px;
-      border-radius: 50%;
-      background: #e3e9da;
-      left: 50%;
-      top: 50%;
-      transform: translate(-46%, -46%);
+    .hero-inner {
+      max-width: 850px;
+      padding: 80px 20px;
     }
 
-    .photo-wrap img {
-      width: 305px;
-      height: 305px;
-      object-fit: cover;
-      border-radius: 50%;
-      position: relative;
-      z-index: 2;
-      border: 8px solid #fffdf8;
-      box-shadow: 0 15px 35px rgba(80, 67, 86, 0.16);
-    }
-
-    .about-text h2 {
-      font-size: 50px;
-      margin-bottom: 2px;
-    }
-
-    .credentials {
-      color: #806b8e;
-      letter-spacing: 1.3px;
+    .eyebrow {
+      color: var(--sage-dark);
+      letter-spacing: .22em;
+      text-transform: uppercase;
       font-size: 12px;
       font-weight: 600;
-      margin-bottom: 24px;
-    }
-
-    .about-text p {
-      font-size: 16px;
-    }
-
-
-    /* SERVICES */
-
-    .services-section {
-      padding: 95px 25px;
-      background:
-        linear-gradient(
-          180deg,
-          #f3ecf3 0%,
-          #f7f2f6 100%
-        );
-    }
-
-    .services {
-      max-width: 1200px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 18px;
-    }
-
-    .service-card {
-      background: rgba(255, 255, 255, 0.82);
-      border: 1px solid rgba(164, 143, 172, 0.25);
-      border-radius: 24px;
-      padding: 35px 22px;
-      text-align: center;
-      box-shadow: 0 10px 25px rgba(74, 60, 82, 0.06);
-      transition: 0.25s ease;
-    }
-
-    .service-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 14px 30px rgba(74, 60, 82, 0.10);
-    }
-
-    .service-icon {
-      width: 68px;
-      height: 68px;
-      border-radius: 50%;
-      margin: 0 auto 18px;
-      background: #e8ecdf;
-      color: #76856b;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 30px;
-    }
-
-    .service-card:nth-child(even) .service-icon {
-      background: #ece1ee;
-      color: #806b8e;
-    }
-
-    .service-card h3 {
-      font-size: 25px;
-      line-height: 1.1;
       margin-bottom: 14px;
     }
 
-    .service-card p {
-      font-size: 14px;
-      margin-bottom: 0;
+    .hero h1 {
+      margin-bottom: 12px;
+      font-size: clamp(52px, 7vw, 86px);
+      line-height: .94;
+      letter-spacing: -.02em;
+      text-shadow: 0 2px 18px rgba(255,255,255,.55);
     }
 
+    .tagline {
+      margin-bottom: 20px;
+      color: var(--sage-dark);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(24px, 3vw, 33px);
+      font-style: italic;
+    }
 
-    /* SOFT QUOTE SECTION */
+    .hero-copy {
+      max-width: 650px;
+      margin: 0 auto 29px;
+      font-size: 17px;
+      color: #463f48;
+    }
 
-    .pause-section {
-      padding: 80px 25px;
-      background: #fbf8f2;
+    /* ABOUT */
+    .about-section {
+      padding: 92px 0;
+      background: var(--cream2);
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 350px 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .portrait-wrap {
+      position: relative;
+      width: 320px;
+      margin: 0 auto;
+    }
+
+    .portrait-wrap::before {
+      content: "";
+      position: absolute;
+      inset: 14px -14px -14px 14px;
+      border-radius: 48% 52% 52% 48% / 52% 46% 54% 48%;
+      background: #dfe5d7;
+      transform: rotate(4deg);
+    }
+
+    .portrait {
+      position: relative;
+      display: block;
+      width: 320px;
+      height: 320px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 50%;
+      border: 9px solid #fffdf9;
+      box-shadow: 0 18px 45px rgba(70,58,76,.16);
+    }
+
+    .about h2 {
+      font-size: clamp(43px, 5vw, 58px);
+      margin-bottom: 4px;
+    }
+
+    .credentials {
+      margin-bottom: 25px;
+      color: var(--purple2);
+      letter-spacing: .11em;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .about p {
+      max-width: 690px;
+      color: var(--soft-ink);
+    }
+
+    /* SERVICES */
+    .services-section {
+      padding: 92px 0 96px;
+      background:
+        radial-gradient(circle at 15% 0%, rgba(255,255,255,.7), transparent 26%),
+        linear-gradient(180deg, #f2eaf3, #f7f2f6);
+    }
+
+    .section-head {
+      max-width: 680px;
+      margin: 0 auto 45px;
       text-align: center;
     }
 
-    .pause-section p {
-      font-family: "Cormorant Garamond", Georgia, serif;
-      font-style: italic;
-      font-size: 30px;
-      color: #77677f;
-      max-width: 760px;
-      margin: auto;
+    .section-head h2 {
+      font-size: clamp(46px, 5vw, 58px);
+      margin-bottom: 4px;
     }
 
+    .section-head p {
+      margin: 0;
+      color: var(--soft-ink);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 17px;
+    }
+
+    .card {
+      min-height: 325px;
+      padding: 31px 20px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: rgba(255,255,255,.73);
+      box-shadow: 0 10px 30px rgba(86,70,94,.06);
+      text-align: center;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 32px rgba(86,70,94,.11);
+    }
+
+    .icon {
+      display: grid;
+      place-items: center;
+      width: 68px;
+      height: 68px;
+      margin: 0 auto 17px;
+      border-radius: 50%;
+      background: #e8e1ed;
+      color: var(--purple);
+      font-family: Georgia, serif;
+      font-size: 30px;
+    }
+
+    .card:nth-child(2n) .icon {
+      color: var(--sage-dark);
+      background: #e4e9df;
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      font-size: 24px;
+      line-height: 1.08;
+    }
+
+    .card p {
+      margin-bottom: 0;
+      color: var(--soft-ink);
+      font-size: 13.5px;
+    }
+
+    /* QUOTE */
+    .quote {
+      padding: 70px 20px;
+      background: #fffaf3;
+      text-align: center;
+    }
+
+    .quote p {
+      max-width: 760px;
+      margin: 0 auto;
+      color: #73627d;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(28px, 4vw, 38px);
+      font-style: italic;
+      line-height: 1.25;
+    }
 
     /* CONTACT */
-
     .contact-section {
-      padding: 90px 25px;
+      padding: 88px 0;
       background:
-        radial-gradient(circle at 20% 10%, rgba(255,255,255,0.5), transparent 35%),
-        linear-gradient(135deg, #e8dcea, #eee6ef);
+        radial-gradient(circle at 15% 0%, rgba(255,255,255,.6), transparent 28%),
+        linear-gradient(135deg, #e9dfeb, #f0e9f0);
       text-align: center;
     }
 
     .contact-section h2 {
-      font-size: 50px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
+      font-size: clamp(44px, 5vw, 57px);
     }
 
-    .contact-section > p {
+    .contact-intro {
       max-width: 620px;
-      margin: 0 auto;
+      margin: 0 auto 40px;
+      color: var(--soft-ink);
     }
 
-    .contact-options {
-      max-width: 930px;
-      margin: 45px auto 0;
+    .contact-grid {
+      max-width: 920px;
+      margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      gap: 22px;
     }
 
     .contact-card {
-      background: rgba(255,255,255,0.58);
-      border-radius: 24px;
-      padding: 34px 22px;
-      border: 1px solid rgba(255,255,255,0.7);
-      box-shadow: 0 8px 20px rgba(77, 62, 86, 0.07);
+      padding: 30px 20px;
+      border: 1px solid rgba(255,255,255,.8);
+      border-radius: 20px;
+      background: rgba(255,255,255,.56);
+      box-shadow: 0 9px 25px rgba(80,65,87,.06);
     }
 
-    .contact-icon {
-      width: 70px;
-      height: 70px;
-      margin: 0 auto 15px;
+    .contact-card .round {
+      display: grid;
+      place-items: center;
+      width: 66px;
+      height: 66px;
+      margin: 0 auto 13px;
       border-radius: 50%;
-      background: #8b759a;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
+      color: #fff;
+      background: var(--purple2);
+      font-size: 25px;
+    }
+
+    .contact-card:nth-child(2) .round {
+      background: var(--sage-dark);
     }
 
     .contact-card h3 {
+      margin-bottom: 3px;
       font-size: 25px;
-      margin-bottom: 5px;
     }
 
     .contact-card a {
-      color: #665174;
+      color: var(--purple);
       font-weight: 600;
+      word-break: break-word;
     }
 
-    .contact-card a:hover {
-      text-decoration: underline;
-    }
-
-
-    /* DISCLAIMER */
+    .contact-card a:hover { text-decoration: underline; }
 
     .disclaimer {
-      background: #fffdf8;
-      padding: 35px 25px;
-      text-align: center;
+      padding: 30px 20px;
+      background: var(--cream2);
       color: #746e74;
+      text-align: center;
       font-size: 12px;
     }
 
     .disclaimer p {
       max-width: 850px;
-      margin: auto;
+      margin: 0 auto;
     }
-
-
-    /* FOOTER */
 
     footer {
-      background: #99a28c;
-      color: white;
+      padding: 25px 20px;
+      color: #fff;
+      background: var(--sage);
       text-align: center;
-      padding: 28px 20px;
       font-size: 13px;
-      letter-spacing: 0.3px;
+      letter-spacing: .02em;
     }
 
-
-    /* TABLET */
-
-    @media (max-width: 1000px) {
-
-      .topbar {
+    @media (max-width: 1020px) {
+      .nav {
+        flex-direction: column;
         justify-content: center;
+        padding: 18px 0 22px;
       }
-
-      .nav-links {
-        justify-content: center;
+      .brand img {
+        width: 180px;
+        height: 75px;
+        object-position: center;
       }
-
+      .links { justify-content: center; }
       .about {
         grid-template-columns: 1fr;
         text-align: center;
       }
-
-      .services {
-        grid-template-columns: repeat(2, 1fr);
-      }
+      .about p { margin-left: auto; margin-right: auto; }
+      .cards { grid-template-columns: repeat(2, 1fr); }
     }
 
-
-    /* PHONE */
-
-    @media (max-width: 620px) {
-
-      .topbar {
-        position: relative;
-      }
-
-      .logo {
-        width: 230px;
-        max-width: 90%;
-      }
-
-      .nav-links {
-        gap: 13px;
-      }
-
-      .nav-links a {
-        font-size: 13px;
-      }
-
-      .hero {
-        min-height: auto;
-        padding: 85px 20px;
-      }
-
-      .hero-subtitle {
-        font-size: 22px;
-      }
-
-      .photo-wrap img {
-        width: 235px;
-        height: 235px;
-      }
-
-      .photo-wrap::before {
-        width: 240px;
-        height: 240px;
-      }
-
-      .about-text h2 {
-        font-size: 42px;
-      }
-
-      .services {
-        grid-template-columns: 1fr;
-      }
-
-      .contact-options {
-        grid-template-columns: 1fr;
-      }
+    @media (max-width: 650px) {
+      .shell { width: min(100% - 28px, 1180px); }
+      .links { gap: 13px; }
+      .links a:not(.btn) { font-size: 12px; }
+      .hero { min-height: 510px; }
+      .hero-inner { padding: 70px 8px; }
+      .portrait-wrap, .portrait { width: 245px; }
+      .portrait { height: 245px; }
+      .about-section, .services-section, .contact-section { padding: 72px 0; }
+      .cards, .contact-grid { grid-template-columns: 1fr; }
+      .card { min-height: 0; }
     }
-
   </style>
-
 </head>
-
 
 <body>
 
+<header>
+  <div class="shell nav">
+    <a class="brand" href="#home" aria-label="Four Crows Holistic Healing home">
+      <img src="logo.png" alt="Four Crows Holistic Healing logo">
+    </a>
 
-  <!-- NAVIGATION -->
-
-  <nav class="topbar">
-
-    <img
-      src="Four Crows Logo.jpg"
-      alt="Four Crows Holistic Healing"
-      class="logo"
-    >
-
-    <div class="nav-links">
-
+    <nav class="links" aria-label="Main navigation">
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#contact">Contact</a>
+      <a class="btn" href="https://TheAlignedCollective.as.me/Maxine" target="_blank" rel="noopener">Book a Session</a>
+    </nav>
+  </div>
+</header>
 
-      <a
-        class="button"
-        href="https://TheAlignedCollective.as.me/Maxine"
-        target="_blank"
-        rel="noopener"
-      >
-        Book a Session
-      </a>
-
-    </div>
-
-  </nav>
-
-
-  <!-- HERO -->
+<main>
 
   <section class="hero" id="home">
-
-    <div class="hero-content">
-
-      <div class="hero-small">
-        Four Crows Holistic Healing
-      </div>
-
-      <h1>
-        Healing for Mind,<br>
-        Body &amp; Spirit
-      </h1>
-
-      <div class="hero-subtitle">
-        Reiki • Intuition • Energy • Connection
-      </div>
-
-      <p>
-        A peaceful and supportive space to relax,
-        restore, reconnect, and nurture your natural
-        sense of balance and well-being.
-      </p>
-
-      <a
-        class="button"
-        href="https://TheAlignedCollective.as.me/Maxine"
-        target="_blank"
-        rel="noopener"
-      >
-        Book a Session
-      </a>
-
+    <div class="hero-inner">
+      <div class="eyebrow">Four Crows Holistic Healing</div>
+      <h1>Healing for Mind,<br>Body &amp; Spirit</h1>
+      <div class="tagline">Reiki • Intuition • Energy • Connection</div>
+      <p class="hero-copy">A peaceful and supportive space to relax, restore, reconnect, and nurture your natural sense of balance and well-being.</p>
+      <a class="btn" href="https://TheAlignedCollective.as.me/Maxine" target="_blank" rel="noopener">Book a Session</a>
     </div>
-
   </section>
-
-
-  <!-- ABOUT -->
 
   <section class="about-section" id="about">
-
-    <div class="about">
-
-      <div class="photo-wrap">
-
-        <img
-          src="thumbnail2.jpg"
-          alt="Maxine of Four Crows Holistic Healing"
-        >
-
+    <div class="shell about">
+      <div class="portrait-wrap">
+        <img class="portrait" src="maxine.jpg" alt="Maxine of Four Crows Holistic Healing">
       </div>
 
+      <div>
+        <h2>Hello, I’m Maxine</h2>
+        <div class="credentials">Holy Fire® Reiki Practitioner • 200 RYT Yoga Instructor • Psychic Medium</div>
 
-      <div class="about-text">
-
-        <h2>Hello, I'm Maxine</h2>
-
-        <div class="credentials">
-          HOLY FIRE® REIKI PRACTITIONER • 200 RYT YOGA INSTRUCTOR • PSYCHIC MEDIUM
-        </div>
-
-        <p>
-          I am a Usui Holy Fire® Reiki Master Practitioner,
-          200 RYT Yoga Instructor, and practicing Psychic Medium.
-        </p>
-
-        <p>
-          My work blends Reiki, intuition, energy work, and
-          spiritual connection to create a nurturing and grounded
-          space for relaxation, healing, and self-discovery.
-        </p>
-
-        <p>
-          Whether you are seeking relaxation, emotional support,
-          spiritual guidance, or a deeper connection with yourself,
-          I offer supportive sessions designed to meet you where you are.
-        </p>
-
+        <p>I am a Usui Holy Fire® Reiki Master Practitioner, 200 RYT Yoga Instructor, and practicing Psychic Medium.</p>
+        <p>My work blends Reiki, intuition, energy work, and spiritual connection to create a nurturing and grounded space for relaxation, healing, and self-discovery.</p>
+        <p>Whether you are seeking relaxation, emotional support, spiritual guidance, or a deeper connection with yourself, I offer supportive sessions designed to meet you where you are.</p>
       </div>
-
     </div>
-
   </section>
-
-
-  <!-- SERVICES -->
 
   <section class="services-section" id="services">
+    <div class="shell">
+      <div class="section-head">
+        <h2>Services</h2>
+        <p>Each offering is created to support relaxation, connection, mindfulness, and your individual healing journey.</p>
+      </div>
 
-    <div class="section-title">
+      <div class="cards">
+        <article class="card">
+          <div class="icon">✧</div>
+          <h3>Intuitive Reiki Healing</h3>
+          <p>A personalized Reiki experience combining gentle energy healing with intuitive impressions and guidance that may arise during your session.</p>
+        </article>
 
-      <h2>Services</h2>
+        <article class="card">
+          <div class="icon">❦</div>
+          <h3>Distance Reiki</h3>
+          <p>Reiki offered remotely so you can receive supportive, relaxing energy from the comfort of your own space.</p>
+        </article>
 
-      <p>
-        Each offering is created to support relaxation,
-        connection, mindfulness, and your individual healing journey.
-      </p>
+        <article class="card">
+          <div class="icon">✿</div>
+          <h3>Reiki Shares</h3>
+          <p>A supportive group experience centered around sharing Reiki, relaxation, connection, and community.</p>
+        </article>
 
+        <article class="card">
+          <div class="icon">☾</div>
+          <h3>Psychic Mediumship</h3>
+          <p>Intuitive and mediumship sessions focused on spiritual connection, guidance, and messages that may come through.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">❁</div>
+          <h3>Yoga Flow Classes</h3>
+          <p>Grounding yoga flow classes designed to support movement, flexibility, strength, mindfulness, and calm.</p>
+        </article>
+      </div>
     </div>
-
-
-    <div class="services">
-
-
-      <div class="service-card">
-
-        <div class="service-icon">✧</div>
-
-        <h3>Intuitive Reiki Healing</h3>
-
-        <p>
-          A personalized Reiki experience combining gentle energy
-          healing with intuitive impressions and guidance that may
-          arise during your session.
-        </p>
-
-      </div>
-
-
-      <div class="service-card">
-
-        <div class="service-icon">❦</div>
-
-        <h3>Distance Reiki</h3>
-
-        <p>
-          Reiki offered remotely so you can receive supportive,
-          relaxing energy from the comfort of your own space.
-        </p>
-
-      </div>
-
-
-      <div class="service-card">
-
-        <div class="service-icon">✿</div>
-
-        <h3>Reiki Shares</h3>
-
-        <p>
-          A supportive group experience centered around sharing Reiki,
-          relaxation, connection, and community.
-        </p>
-
-      </div>
-
-
-      <div class="service-card">
-
-        <div class="service-icon">☾</div>
-
-        <h3>Psychic Mediumship</h3>
-
-        <p>
-          Intuitive and mediumship sessions focused on spiritual
-          connection, guidance, and messages that may come through.
-        </p>
-
-      </div>
-
-
-      <div class="service-card">
-
-        <div class="service-icon">❁</div>
-
-        <h3>Yoga Flow Classes</h3>
-
-        <p>
-          Grounding yoga flow classes designed to support movement,
-          flexibility, strength, mindfulness, and calm.
-        </p>
-
-      </div>
-
-
-    </div>
-
   </section>
 
-
-  <!-- QUOTE -->
-
-  <section class="pause-section">
-
-    <p>
-      “A space to slow down, reconnect, and return to yourself.”
-    </p>
-
+  <section class="quote">
+    <p>“A space to slow down, reconnect, and return to yourself.”</p>
   </section>
-
-
-  <!-- CONTACT -->
 
   <section class="contact-section" id="contact">
+    <div class="shell">
+      <h2>Ready to Begin Your Healing Journey?</h2>
+      <p class="contact-intro">Book your session online or reach out directly if you have questions about any of my offerings.</p>
 
-    <h2>Ready to Begin Your Healing Journey?</h2>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="round">✦</div>
+          <h3>Book a Session</h3>
+          <a href="https://TheAlignedCollective.as.me/Maxine" target="_blank" rel="noopener">Schedule Online</a>
+        </div>
 
-    <p>
-      Book your session online or reach out directly
-      if you have questions about any of my offerings.
-    </p>
+        <div class="contact-card">
+          <div class="round">☎</div>
+          <h3>Call Me</h3>
+          <a href="tel:5853147905">585-314-7905</a>
+        </div>
 
-
-    <div class="contact-options">
-
-
-      <div class="contact-card">
-
-        <div class="contact-icon">✦</div>
-
-        <h3>Book a Session</h3>
-
-        <a
-          href="https://TheAlignedCollective.as.me/Maxine"
-          target="_blank"
-          rel="noopener"
-        >
-          Schedule Online
-        </a>
-
+        <div class="contact-card">
+          <div class="round">✉</div>
+          <h3>Email Me</h3>
+          <a href="mailto:mc1436@aol.com">mc1436@aol.com</a>
+        </div>
       </div>
-
-
-      <div class="contact-card">
-
-        <div class="contact-icon">☎</div>
-
-        <h3>Call Me</h3>
-
-        <a href="tel:5853147905">
-          585-314-7905
-        </a>
-
-      </div>
-
-
-      <div class="contact-card">
-
-        <div class="contact-icon">✉</div>
-
-        <h3>Email Me</h3>
-
-        <a href="mailto:mc1436@aol.com">
-          mc1436@aol.com
-        </a>
-
-      </div>
-
-
     </div>
-
   </section>
-
-
-  <!-- DISCLAIMER -->
 
   <section class="disclaimer">
-
-    <p>
-      Reiki and intuitive services are complementary wellness practices
-      and are not intended to diagnose, treat, cure, or replace medical
-      or mental health care.
-    </p>
-
+    <p>Reiki and intuitive services are complementary wellness practices and are not intended to diagnose, treat, cure, or replace medical or mental health care.</p>
   </section>
 
+</main>
 
-  <!-- FOOTER -->
-
-  <footer>
-    © 2026 Four Crows Holistic Healing • All Rights Reserved
-  </footer>
-
+<footer>© 2026 Four Crows Holistic Healing • All Rights Reserved</footer>
 
 </body>
-
 </html>
