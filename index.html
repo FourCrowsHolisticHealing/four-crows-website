@@ -5,139 +5,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Four Crows Holistic Healing — Reiki, intuitive healing, psychic mediumship, distance Reiki, Reiki shares, and yoga.">
   <title>Four Crows Holistic Healing</title>
-
   <style>
-    html {
-      scroll-behavior: smooth;
-      background: #f7f1eb;
-    }
-
-    body {
-      margin: 0;
-      background: #f7f1eb;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
+    html { scroll-behavior:smooth; background:#f7f1eb; }
+    body { margin:0; background:#f7f1eb; font-family:Arial,Helvetica,sans-serif; }
     .page {
-      position: relative;
-      width: min(100%, 1024px);
-      margin: 0 auto;
-      line-height: 0;
-      background: #f7f1eb;
-      box-shadow: 0 0 30px rgba(70, 55, 80, 0.08);
+      position:relative; width:min(100%,1024px); margin:0 auto; line-height:0;
+      background:#f7f1eb; box-shadow:0 0 30px rgba(70,55,80,.08);
     }
-
-    .page img {
-      display: block;
-      width: 100%;
-      height: auto;
-      user-select: none;
-      -webkit-user-drag: none;
-    }
-
-    .anchor {
-      position: absolute;
-      left: 0;
-      width: 1px;
-      height: 1px;
-      pointer-events: none;
-    }
-
+    .page img { display:block; width:100%; height:auto; user-select:none; -webkit-user-drag:none; }
+    .anchor { position:absolute; left:0; width:1px; height:1px; pointer-events:none; }
     .hotspot {
-      position: absolute;
-      display: block;
-      background: transparent;
-      border-radius: 999px;
-      cursor: pointer;
-      line-height: normal;
+      position:absolute; display:block; background:transparent; border-radius:999px;
+      cursor:pointer; line-height:normal;
     }
+    .hotspot:focus-visible { outline:3px solid rgba(92,70,116,.75); outline-offset:2px; }
 
-    .hotspot:focus-visible {
-      outline: 3px solid rgba(92, 70, 116, 0.75);
-      outline-offset: 2px;
-    }
+    .home-link{left:30.4%;top:3%;width:6.3%;height:2.5%}
+    .about-link{left:37.6%;top:3%;width:6.6%;height:2.5%}
+    .services-link{left:45.4%;top:3%;width:7.9%;height:2.5%}
+    .offerings-link{left:54.1%;top:3%;width:8%;height:2.5%}
+    .testimonials-link{left:63%;top:3%;width:10%;height:2.5%}
+    .contact-link{left:74.2%;top:3%;width:7%;height:2.5%}
+    .top-book{left:81.8%;top:2%;width:15.8%;height:3.2%}
+    .hero-book{left:39.6%;top:31.6%;width:20.8%;height:3.5%}
+    .bottom-book{left:51.2%;top:89.1%;width:13%;height:5.2%}
+    .phone-link{left:66%;top:89.1%;width:13%;height:5.2%}
+    .email-link{left:81%;top:89.1%;width:15.5%;height:5.2%}
 
-    /* Top navigation */
-    .home-link         { left: 30.4%; top: 3.0%;  width: 6.3%;  height: 2.5%; }
-    .about-link        { left: 37.6%; top: 3.0%;  width: 6.6%;  height: 2.5%; }
-    .services-link     { left: 45.4%; top: 3.0%;  width: 7.9%;  height: 2.5%; }
-    .offerings-link    { left: 54.1%; top: 3.0%;  width: 8.0%;  height: 2.5%; }
-    .testimonials-link { left: 63.0%; top: 3.0%;  width: 10.0%; height: 2.5%; }
-    .contact-link      { left: 74.2%; top: 3.0%;  width: 7.0%;  height: 2.5%; }
-    .top-book          { left: 81.8%; top: 2.0%;  width: 15.8%; height: 3.2%; }
+    #home{top:0} #about{top:38%} #services{top:61%} #offerings{top:61%}
+    #testimonials{top:84%} #contact{top:86%}
 
-    /* Main book button */
-    .hero-book         { left: 39.6%; top: 31.6%; width: 20.8%; height: 3.5%; }
+    /* Social links overlay the four round social buttons in the approved design */
+    .social { top:95.55%; height:1.95%; width:4.6%; }
+    .facebook { left:40.2%; }
+    .instagram { left:45.3%; }
+    .tiktok { left:50.4%; }
+    .youtube { left:55.5%; }
 
-    /* Bottom contact links */
-    .bottom-book       { left: 51.2%; top: 89.1%; width: 13.0%; height: 5.2%; }
-    .phone-link        { left: 66.0%; top: 89.1%; width: 13.0%; height: 5.2%; }
-    .email-link        { left: 81.0%; top: 89.1%; width: 15.5%; height: 5.2%; }
-
-    /* Invisible section positions for nav scrolling */
-    #home        { top: 0%; }
-    #about       { top: 38%; }
-    #services    { top: 61%; }
-    #offerings   { top: 61%; }
-    #testimonials{ top: 84%; }
-    #contact     { top: 86%; }
-
-    @media (max-width: 700px) {
-      .page {
-        width: 100%;
-        box-shadow: none;
-      }
-    }
+    @media(max-width:700px){ .page{width:100%;box-shadow:none} }
   </style>
 </head>
-
 <body>
+<div class="page">
+  <span class="anchor" id="home"></span>
+  <span class="anchor" id="about"></span>
+  <span class="anchor" id="services"></span>
+  <span class="anchor" id="offerings"></span>
+  <span class="anchor" id="testimonials"></span>
+  <span class="anchor" id="contact"></span>
 
-  <div class="page">
+  <img src="site-design.png" alt="Four Crows Holistic Healing website">
 
-    <span class="anchor" id="home"></span>
-    <span class="anchor" id="about"></span>
-    <span class="anchor" id="services"></span>
-    <span class="anchor" id="offerings"></span>
-    <span class="anchor" id="testimonials"></span>
-    <span class="anchor" id="contact"></span>
+  <a class="hotspot home-link" href="#home" aria-label="Home"></a>
+  <a class="hotspot about-link" href="#about" aria-label="About"></a>
+  <a class="hotspot services-link" href="#services" aria-label="Services"></a>
+  <a class="hotspot offerings-link" href="#offerings" aria-label="Offerings"></a>
+  <a class="hotspot testimonials-link" href="#testimonials" aria-label="Testimonials"></a>
+  <a class="hotspot contact-link" href="#contact" aria-label="Contact"></a>
 
-    <img src="site-design.png" alt="Four Crows Holistic Healing website">
+  <a class="hotspot top-book" href="https://TheAlignedCollective.as.me/Maxine" target="_blank" rel="noopener" aria-label="Book a Session"></a>
+  <a class="hotspot hero-book" href="https://TheAlignedCollective.as.me/Maxine" target="_blank" rel="noopener" aria-label="Book a Session"></a>
+  <a class="hotspot bottom-book" href="https://TheAlignedCollective.as.me/Maxine" target="_blank" rel="noopener" aria-label="Book a Session"></a>
+  <a class="hotspot phone-link" href="tel:5853147905" aria-label="Call 585-314-7905"></a>
+  <a class="hotspot email-link" href="mailto:mc1436@aol.com" aria-label="Email Four Crows Holistic Healing"></a>
 
-    <a class="hotspot home-link" href="#home" aria-label="Home"></a>
-    <a class="hotspot about-link" href="#about" aria-label="About"></a>
-    <a class="hotspot services-link" href="#services" aria-label="Services"></a>
-    <a class="hotspot offerings-link" href="#offerings" aria-label="Offerings"></a>
-    <a class="hotspot testimonials-link" href="#testimonials" aria-label="Testimonials"></a>
-    <a class="hotspot contact-link" href="#contact" aria-label="Contact"></a>
-
-    <a class="hotspot top-book"
-       href="https://TheAlignedCollective.as.me/Maxine"
-       target="_blank"
-       rel="noopener"
-       aria-label="Book a Session"></a>
-
-    <a class="hotspot hero-book"
-       href="https://TheAlignedCollective.as.me/Maxine"
-       target="_blank"
-       rel="noopener"
-       aria-label="Book a Session"></a>
-
-    <a class="hotspot bottom-book"
-       href="https://TheAlignedCollective.as.me/Maxine"
-       target="_blank"
-       rel="noopener"
-       aria-label="Book a Session"></a>
-
-    <a class="hotspot phone-link"
-       href="tel:5853147905"
-       aria-label="Call 585-314-7905"></a>
-
-    <a class="hotspot email-link"
-       href="mailto:mc1436@aol.com"
-       aria-label="Email mc1436@aol.com"></a>
-
-  </div>
-
+  <a class="hotspot social facebook" href="https://www.facebook.com/profile.php?id=61593364600948" target="_blank" rel="noopener" aria-label="Four Crows Holistic Healing on Facebook"></a>
+  <a class="hotspot social instagram" href="https://www.instagram.com/fourcrows.h.h/" target="_blank" rel="noopener" aria-label="Four Crows Holistic Healing on Instagram"></a>
+  <a class="hotspot social tiktok" href="https://www.tiktok.com/@fourcrows.h.h" target="_blank" rel="noopener" aria-label="Four Crows Holistic Healing on TikTok"></a>
+  <a class="hotspot social youtube" href="https://www.youtube.com/@fourcrowsholistichealing" target="_blank" rel="noopener" aria-label="Four Crows Holistic Healing on YouTube"></a>
+</div>
 </body>
 </html>
