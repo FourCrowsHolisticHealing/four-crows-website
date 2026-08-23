@@ -5,26 +5,54 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Four Crows Holistic Healing">
 <title>Four Crows Holistic Healing</title>
+
 <style>
+:root {
+  --cream: #fffaf3;
+  --lavender: #eee5f0;
+  --purple: #5d4675;
+  --purple-light: #80689a;
+  --sage: #aab196;
+  --sage-dark: #74806a;
+  --text: #3d3740;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
-  background: #aab196;
-  min-height: 100%;
+  background: var(--cream);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-  overflow-x: hidden;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.page {
+
+/* =========================================
+   DESKTOP / LAPTOP WEBSITE
+   ========================================= */
+
+.desktop-site {
+  display: block;
+}
+
+.desktop-page {
   position: relative;
   width: min(100%, 1024px);
   margin: 0 auto;
+  line-height: 0;
+  background: var(--cream);
 }
 
-.page-image {
+.desktop-page img {
   display: block;
   width: 100%;
   height: auto;
@@ -38,95 +66,1034 @@ body {
   z-index: 10;
 }
 
-.link-map a {
-  cursor: pointer;
-}
-
 .link-map .target {
   fill: transparent;
   stroke: transparent;
 }
 
-.link-map a:focus .target {
-  stroke: #5c3f7e;
-  stroke-width: 3;
+.link-map a {
+  cursor: pointer;
 }
 
-/* PHONE VERSION */
-@media screen and (max-width: 600px) {
 
-  html,
-  body {
-    background: #aab196;
-    min-height: 100vh;
-    min-height: 100svh;
-  }
+/* =========================================
+   MOBILE WEBSITE
+   ========================================= */
 
-  .page {
-    width: 150vw;
-    max-width: none;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 0;
-  }
-
-  .page-image {
-    width: 100%;
-    height: auto;
-  }
+.mobile-site {
+  display: none;
+  width: 100%;
+  min-height: 100vh;
+  background: var(--cream);
 }
+
+
+/* MOBILE HEADER */
+
+.mobile-header {
+  width: 100%;
+  padding: 24px 18px 20px;
+  text-align: center;
+  background: #fffdf9;
+  border-bottom: 1px solid #eee5df;
+}
+
+.mobile-brand {
+  color: var(--purple);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 31px;
+  line-height: 1.05;
+}
+
+.mobile-tagline {
+  margin-top: 8px;
+  color: var(--sage-dark);
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 16px;
+}
+
+.mobile-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.mobile-nav a {
+  font-size: 14px;
+}
+
+.book-button {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 13px 25px;
+  border-radius: 30px;
+  background: var(--purple-light);
+  color: white;
+  font-weight: bold;
+}
+
+
+/* MOBILE HERO */
+
+.mobile-hero {
+  width: 100%;
+  padding: 72px 22px;
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at 15% 25%,
+      rgba(187, 202, 178, 0.55),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(216, 194, 225, 0.60),
+      transparent 30%
+    ),
+    linear-gradient(
+      145deg,
+      #fffaf3,
+      #f4ebf6 55%,
+      #edf2e7
+    );
+}
+
+.mobile-hero h1 {
+  margin: 0;
+  color: var(--purple);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 46px;
+  line-height: 1.02;
+  font-weight: normal;
+}
+
+.mobile-hero-tagline {
+  margin: 17px 0;
+  color: var(--sage-dark);
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 23px;
+}
+
+.mobile-hero p {
+  max-width: 520px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+
+/* GENERAL MOBILE SECTION */
+
+.mobile-section {
+  width: 100%;
+  padding: 58px 22px;
+}
+
+.mobile-section h2 {
+  margin: 0 0 22px;
+  color: var(--purple);
+  text-align: center;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 38px;
+  font-weight: normal;
+}
+
+
+/* ABOUT */
+
+.mobile-about {
+  background: #fffdf9;
+}
+
+.about-content {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.75;
+}
+
+.credentials {
+  margin-bottom: 20px;
+  color: var(--purple-light);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+
+/* SERVICES */
+
+.mobile-services {
+  background: linear-gradient(
+    #f0e8f2,
+    #f7f1f7
+  );
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.service-card {
+  padding: 27px 20px;
+  text-align: center;
+  background: rgba(255,255,255,0.84);
+  border-radius: 20px;
+  border: 1px solid rgba(94,70,117,0.14);
+  box-shadow: 0 6px 18px rgba(70,55,80,0.05);
+}
+
+.service-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  background: #e4e9dd;
+  color: var(--sage-dark);
+  font-size: 28px;
+}
+
+.service-card:nth-child(even) .service-icon {
+  background: #eadfee;
+  color: var(--purple);
+}
+
+.service-card h3 {
+  margin: 0 0 11px;
+  color: var(--purple);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25px;
+  font-weight: normal;
+}
+
+.service-card p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+
+/* QUOTE */
+
+.mobile-quote {
+  width: 100%;
+  padding: 48px 25px;
+  text-align: center;
+  background: var(--cream);
+  color: #725e7d;
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-size: 25px;
+  line-height: 1.4;
+}
+
+
+/* CONTACT */
+
+.mobile-contact {
+  background: linear-gradient(
+    135deg,
+    #e9deeb,
+    #f1eaf2
+  );
+}
+
+.contact-intro {
+  max-width: 560px;
+  margin: 0 auto 30px;
+  text-align: center;
+  line-height: 1.7;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  padding: 25px 18px;
+  text-align: center;
+  background: rgba(255,255,255,0.65);
+  border-radius: 18px;
+}
+
+.contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  background: var(--purple-light);
+  color: white;
+  font-size: 25px;
+}
+
+.contact-card:nth-child(2) .contact-icon {
+  background: var(--sage-dark);
+}
+
+.contact-card h3 {
+  margin: 0 0 6px;
+  color: var(--purple);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.contact-card a {
+  color: var(--purple);
+  font-weight: bold;
+}
+
+
+/* MOBILE FOOTER */
+
+.mobile-footer {
+  width: 100%;
+  padding: 25px 18px 22px;
+  background: var(--sage);
+  text-align: center;
+}
+
+.follow-text {
+  margin: 0 0 15px;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  border: 2px solid var(--purple);
+  border-radius: 50%;
+
+  background: var(--cream);
+  color: var(--purple);
+
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.copyright {
+  margin-top: 18px;
+  color: #3e3940;
+  font-size: 11px;
+}
+
+
+/* =========================================
+   PHONE SWITCH
+   ========================================= */
+
+@media screen and (max-width: 700px) {
+
+  .desktop-site {
+    display: none;
+  }
+
+  .mobile-site {
+    display: block;
+  }
+
+}
+
+
+/* =========================================
+   DESKTOP SWITCH
+   ========================================= */
+
+@media screen and (min-width: 701px) {
+
+  .desktop-site {
+    display: block;
+  }
+
+  .mobile-site {
+    display: none;
+  }
+
+}
+
 </style>
 </head>
+
+
 <body>
 
-<div class="page">
-  <img class="page-image" src="site-design.png" alt="Four Crows Holistic Healing">
 
-  <svg class="link-map" viewBox="0 0 1024 1536" preserveAspectRatio="none"
-       xmlns="http://www.w3.org/2000/svg">
+<!-- ==================================================
+     DESKTOP / LAPTOP VERSION
+     ================================================== -->
 
-    <!-- Book a Session: top -->
-    <a href="https://TheAlignedCollective.as.me/Maxine" target="_blank" rel="noopener">
-      <rect class="target" x="833" y="39" width="165" height="55" rx="26"/>
-    </a>
+<div class="desktop-site">
 
-    <!-- Book a Session: hero -->
-    <a href="https://TheAlignedCollective.as.me/Maxine" target="_blank" rel="noopener">
-      <rect class="target" x="402" y="480" width="224" height="56" rx="28"/>
-    </a>
+  <div class="desktop-page">
 
-    <!-- Bottom contact actions -->
-    <a href="https://TheAlignedCollective.as.me/Maxine" target="_blank" rel="noopener">
-      <rect class="target" x="505" y="1360" width="157" height="130" rx="8"/>
-    </a>
+    <img
+      src="site-design.png"
+      alt="Four Crows Holistic Healing"
+    >
 
-    <a href="tel:5853147905">
-      <rect class="target" x="665" y="1360" width="145" height="130" rx="8"/>
-    </a>
+    <svg
+      class="link-map"
+      viewBox="0 0 1024 1536"
+      preserveAspectRatio="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
 
-    <a href="mailto:mc1436@aol.com">
-      <rect class="target" x="812" y="1360" width="180" height="130" rx="8"/>
-    </a>
 
-    <!-- Footer social icons: exact pixel positions -->
-    <a href="https://www.facebook.com/profile.php?id=61593364600948" target="_blank" rel="noopener">
-      <circle class="target" cx="805" cy="1515" r="24"/>
-    </a>
+      <!-- TOP BOOK BUTTON -->
 
-    <a href="https://www.instagram.com/fourcrows.h.h/" target="_blank" rel="noopener">
-      <circle class="target" cx="858" cy="1515" r="24"/>
-    </a>
+      <a
+        href="https://TheAlignedCollective.as.me/Maxine"
+        target="_blank"
+        rel="noopener"
+      >
 
-    <a href="https://www.tiktok.com/@fourcrows.h.h" target="_blank" rel="noopener">
-      <circle class="target" cx="911" cy="1515" r="24"/>
-    </a>
+        <rect
+          class="target"
+          x="833"
+          y="39"
+          width="165"
+          height="55"
+          rx="26"
+        />
 
-    <a href="https://www.youtube.com/@fourcrowsholistichealing" target="_blank" rel="noopener">
-      <circle class="target" cx="964" cy="1515" r="24"/>
-    </a>
+      </a>
 
-  </svg>
+
+      <!-- HERO BOOK BUTTON -->
+
+      <a
+        href="https://TheAlignedCollective.as.me/Maxine"
+        target="_blank"
+        rel="noopener"
+      >
+
+        <rect
+          class="target"
+          x="402"
+          y="480"
+          width="224"
+          height="56"
+          rx="28"
+        />
+
+      </a>
+
+
+      <!-- BOTTOM BOOKING -->
+
+      <a
+        href="https://TheAlignedCollective.as.me/Maxine"
+        target="_blank"
+        rel="noopener"
+      >
+
+        <rect
+          class="target"
+          x="505"
+          y="1360"
+          width="157"
+          height="130"
+          rx="8"
+        />
+
+      </a>
+
+
+      <!-- PHONE -->
+
+      <a href="tel:5853147905">
+
+        <rect
+          class="target"
+          x="665"
+          y="1360"
+          width="145"
+          height="130"
+          rx="8"
+        />
+
+      </a>
+
+
+      <!-- EMAIL -->
+
+      <a href="mailto:mc1436@aol.com">
+
+        <rect
+          class="target"
+          x="812"
+          y="1360"
+          width="180"
+          height="130"
+          rx="8"
+        />
+
+      </a>
+
+
+      <!-- FACEBOOK -->
+
+      <a
+        href="https://www.facebook.com/profile.php?id=61593364600948"
+        target="_blank"
+        rel="noopener"
+      >
+
+        <circle
+          class="target"
+          cx="805"
+          cy="1515"
+          r="24"
+        />
+
+      </a>
+
+
+      <!-- INSTAGRAM -->
+
+      <a
+        href="https://www.instagram.com/fourcrows.h.h/"
+        target="_blank"
+        rel="noopener"
+      >
+
+        <circle
+          class="target"
+          cx="858"
+          cy="1515"
+          r="24"
+        />
+
+      </a>
+
+
+      <!-- TIKTOK -->
+
+      <a
+        href="https://www.tiktok.com/@fourcrows.h.h"
+        target="_blank"
+        rel="noopener"
+      >
+
+        <circle
+          class="target"
+          cx="911"
+          cy="1515"
+          r="24"
+        />
+
+      </a>
+
+
+      <!-- YOUTUBE -->
+
+      <a
+        href="https://www.youtube.com/@fourcrowsholistichealing"
+        target="_blank"
+        rel="noopener"
+      >
+
+        <circle
+          class="target"
+          cx="964"
+          cy="1515"
+          r="24"
+        />
+
+      </a>
+
+
+    </svg>
+
+  </div>
+
 </div>
+
+
+
+<!-- ==================================================
+     PHONE VERSION
+     ================================================== -->
+
+<div class="mobile-site">
+
+
+  <!-- HEADER -->
+
+  <header class="mobile-header">
+
+    <div class="mobile-brand">
+      Four Crows<br>
+      Holistic Healing
+    </div>
+
+    <div class="mobile-tagline">
+      Reiki • Intuition • Energy • Connection
+    </div>
+
+
+    <nav class="mobile-nav">
+
+      <a href="#about">
+        About
+      </a>
+
+      <a href="#services">
+        Services
+      </a>
+
+      <a href="#contact">
+        Contact
+      </a>
+
+    </nav>
+
+
+    <a
+      class="book-button"
+      href="https://TheAlignedCollective.as.me/Maxine"
+      target="_blank"
+      rel="noopener"
+    >
+      Book a Session
+    </a>
+
+  </header>
+
+
+
+  <!-- HERO -->
+
+  <section class="mobile-hero">
+
+    <h1>
+      Healing for Mind,<br>
+      Body &amp; Spirit
+    </h1>
+
+
+    <div class="mobile-hero-tagline">
+      Reiki • Intuition • Energy • Connection
+    </div>
+
+
+    <p>
+      A peaceful and supportive space to relax,
+      restore, reconnect, and nurture your natural
+      sense of balance and well-being.
+    </p>
+
+
+    <a
+      class="book-button"
+      href="https://TheAlignedCollective.as.me/Maxine"
+      target="_blank"
+      rel="noopener"
+    >
+      Book a Session
+    </a>
+
+  </section>
+
+
+
+  <!-- ABOUT -->
+
+  <section
+    class="mobile-section mobile-about"
+    id="about"
+  >
+
+    <h2>
+      Hello, I'm Maxine
+    </h2>
+
+
+    <div class="about-content">
+
+
+      <div class="credentials">
+
+        HOLY FIRE® REIKI PRACTITIONER
+        • 200 RYT YOGA INSTRUCTOR
+        • PSYCHIC MEDIUM
+
+      </div>
+
+
+      <p>
+
+        I am a Usui Holy Fire® Reiki Master Practitioner,
+        200 RYT Yoga Instructor, and practicing Psychic Medium.
+
+      </p>
+
+
+      <p>
+
+        My work blends Reiki, intuition, energy work,
+        and spiritual connection to create a nurturing
+        and grounded space for relaxation, healing,
+        and self-discovery.
+
+      </p>
+
+
+      <p>
+
+        Whether you are seeking relaxation, emotional support,
+        spiritual guidance, or a deeper connection with yourself,
+        I offer supportive sessions designed to meet you where you are.
+
+      </p>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- SERVICES -->
+
+  <section
+    class="mobile-section mobile-services"
+    id="services"
+  >
+
+    <h2>
+      Services
+    </h2>
+
+
+    <div class="services-grid">
+
+
+      <div class="service-card">
+
+        <div class="service-icon">
+          ✧
+        </div>
+
+        <h3>
+          Intuitive Reiki Healing
+        </h3>
+
+        <p>
+
+          A personalized Reiki experience combining gentle energy
+          healing with intuitive impressions and guidance that may
+          arise during your session.
+
+        </p>
+
+      </div>
+
+
+
+      <div class="service-card">
+
+        <div class="service-icon">
+          ❦
+        </div>
+
+        <h3>
+          Distance Reiki
+        </h3>
+
+        <p>
+
+          Reiki offered remotely so you can receive supportive,
+          relaxing energy from the comfort of your own space.
+
+        </p>
+
+      </div>
+
+
+
+      <div class="service-card">
+
+        <div class="service-icon">
+          ✿
+        </div>
+
+        <h3>
+          Reiki Shares
+        </h3>
+
+        <p>
+
+          A supportive group experience centered around sharing
+          Reiki, relaxation, connection, and community.
+
+        </p>
+
+      </div>
+
+
+
+      <div class="service-card">
+
+        <div class="service-icon">
+          ☾
+        </div>
+
+        <h3>
+          Psychic Mediumship
+        </h3>
+
+        <p>
+
+          Intuitive and mediumship sessions focused on spiritual
+          connection, guidance, and messages that may come through.
+
+        </p>
+
+      </div>
+
+
+
+      <div class="service-card">
+
+        <div class="service-icon">
+          ❁
+        </div>
+
+        <h3>
+          Yoga Flow Classes
+        </h3>
+
+        <p>
+
+          Grounding yoga flow classes designed to support movement,
+          flexibility, strength, mindfulness, and calm.
+
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- QUOTE -->
+
+  <section class="mobile-quote">
+
+    “A space to slow down, reconnect,
+    and return to yourself.”
+
+  </section>
+
+
+
+  <!-- CONTACT -->
+
+  <section
+    class="mobile-section mobile-contact"
+    id="contact"
+  >
+
+    <h2>
+      Ready to Begin Your Healing Journey?
+    </h2>
+
+
+    <p class="contact-intro">
+
+      Book your session online or reach out directly
+      if you have questions about any of my offerings.
+
+    </p>
+
+
+    <div class="contact-grid">
+
+
+      <!-- BOOK -->
+
+      <div class="contact-card">
+
+        <div class="contact-icon">
+          ✦
+        </div>
+
+        <h3>
+          Book a Session
+        </h3>
+
+        <a
+          href="https://TheAlignedCollective.as.me/Maxine"
+          target="_blank"
+          rel="noopener"
+        >
+          Schedule Online
+        </a>
+
+      </div>
+
+
+
+      <!-- PHONE -->
+
+      <div class="contact-card">
+
+        <div class="contact-icon">
+          ☎
+        </div>
+
+        <h3>
+          Call Me
+        </h3>
+
+        <a href="tel:5853147905">
+          585-314-7905
+        </a>
+
+      </div>
+
+
+
+      <!-- EMAIL -->
+
+      <div class="contact-card">
+
+        <div class="contact-icon">
+          ✉
+        </div>
+
+        <h3>
+          Email Me
+        </h3>
+
+        <a href="mailto:mc1436@aol.com">
+          mc1436@aol.com
+        </a>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- SOCIAL FOOTER -->
+
+  <footer class="mobile-footer">
+
+    <p class="follow-text">
+      Follow Four Crows Holistic Healing
+    </p>
+
+
+    <div class="social-links">
+
+
+      <!-- FACEBOOK -->
+
+      <a
+        href="https://www.facebook.com/profile.php?id=61593364600948"
+        target="_blank"
+        rel="noopener"
+        aria-label="Facebook"
+      >
+        f
+      </a>
+
+
+      <!-- INSTAGRAM -->
+
+      <a
+        href="https://www.instagram.com/fourcrows.h.h/"
+        target="_blank"
+        rel="noopener"
+        aria-label="Instagram"
+      >
+        ◎
+      </a>
+
+
+      <!-- TIKTOK -->
+
+      <a
+        href="https://www.tiktok.com/@fourcrows.h.h"
+        target="_blank"
+        rel="noopener"
+        aria-label="TikTok"
+      >
+        ♪
+      </a>
+
+
+      <!-- YOUTUBE -->
+
+      <a
+        href="https://www.youtube.com/@fourcrowsholistichealing"
+        target="_blank"
+        rel="noopener"
+        aria-label="YouTube"
+      >
+        ▶
+      </a>
+
+
+    </div>
+
+
+    <div class="copyright">
+
+      © 2026 Four Crows Holistic Healing
+      • All Rights Reserved
+
+    </div>
+
+
+  </footer>
+
+
+</div>
+
 
 </body>
 </html>
