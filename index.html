@@ -5,94 +5,64 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Four Crows Holistic Healing</title>
 <style>
-*{box-sizing:border-box}
-body{margin:0;background:#f7f1eb;font-family:Arial,Helvetica,sans-serif;color:#2f2933}
-.page{position:relative;width:min(100%,1024px);margin:0 auto}
-.bg{display:block;width:100%;height:auto}
-a{text-decoration:none;color:inherit}
-.hotspot{position:absolute;display:block;z-index:5;background:transparent}
-.top-book{left:81.5%;top:2%;width:16%;height:3.3%}
-.hero-book{left:39%;top:31.2%;width:22%;height:3.8%}
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #f7f1eb;
+}
+.page {
+  position: relative;
+  width: min(100%, 1024px);
+  margin: 0 auto;
+  line-height: 0;
+}
+.page img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.hit {
+  position: absolute;
+  display: block;
+  z-index: 10;
+  background: transparent;
+  border-radius: 999px;
+}
+.hit:focus-visible {
+  outline: 2px solid #624783;
+  outline-offset: 2px;
+}
 
-/* Contact/footer rebuilt as real HTML */
-.contact-row{
- position:absolute; left:0; width:100%; top:78.767943%;
- height:15.610048%; display:grid; grid-template-columns:repeat(3,1fr);
- align-items:center; text-align:center; line-height:1.2;
-}
-.contact-item{padding:12px 18px}
-.icon{
- width:64px;height:64px;border-radius:50%;margin:0 auto 15px;
- display:flex;align-items:center;justify-content:center;color:#fff;
- background:#64498a;font-size:30px;
-}
-.contact-item:nth-child(2) .icon{background:#758665}
-.contact-item h3{margin:0 0 12px;font-family:Georgia,serif;color:#49306f;font-size:28px;font-weight:500}
-.contact-item p{margin:0;font-size:18px}
-.contact-item a:hover{text-decoration:underline}
+/* Booking/contact links */
+.top-book    { left: 82.0%; top: 2.0%;  width: 15.2%; height: 3.3%; }
+.hero-book   { left: 39.0%; top: 31.6%; width: 22.0%; height: 3.6%; }
 
-.footer{
- position:absolute;left:0;bottom:0;width:100%;height:5.622010%;
- display:flex;align-items:center;justify-content:space-between;padding:0 38px;
- line-height:1.2;
-}
-.copyright{font-family:Georgia,serif;font-size:16px;color:#332f33}
-.socials{display:flex;gap:16px}
-.social{
- width:43px;height:43px;border:2px solid #5e3f82;border-radius:50%;
- display:flex;align-items:center;justify-content:center;color:#5e3f82;
- background:rgba(255,255,255,.08);font-weight:bold;font-size:21px
-}
-.social:hover{background:#5e3f82;color:white}
-.ig{font-size:22px} .tt{font-size:19px} .yt{font-size:17px}
+.bottom-book { left: 50.0%; top: 88.4%; width: 14.5%; height: 5.4%; }
+.phone       { left: 65.0%; top: 88.4%; width: 14.0%; height: 5.4%; }
+.email       { left: 79.5%; top: 88.4%; width: 17.5%; height: 5.4%; }
 
-@media(max-width:650px){
- .icon{width:44px;height:44px;font-size:22px;margin-bottom:8px}
- .contact-item{padding:5px}
- .contact-item h3{font-size:15px;margin-bottom:5px}
- .contact-item p{font-size:10px}
- .footer{padding:0 12px}
- .copyright{font-size:9px}
- .socials{gap:6px}
- .social{width:27px;height:27px;font-size:13px}
- .ig{font-size:14px} .tt{font-size:12px} .yt{font-size:11px}
-}
+/* Social icons in the original sage footer */
+.facebook  { left: 76.0%; top: 95.05%; width: 4.2%; height: 2.8%; }
+.instagram { left: 81.1%; top: 95.05%; width: 4.2%; height: 2.8%; }
+.tiktok    { left: 86.2%; top: 95.05%; width: 4.2%; height: 2.8%; }
+.youtube   { left: 91.3%; top: 95.05%; width: 4.2%; height: 2.8%; }
 </style>
 </head>
 <body>
 <div class="page">
-<img class="bg" src="site-design-footer-bg.jpg" alt="Four Crows Holistic Healing">
+  <img src="site-design.png" alt="Four Crows Holistic Healing">
 
-<a class="hotspot top-book" href="https://TheAlignedCollective.as.me/Maxine" target="_blank" rel="noopener" aria-label="Book a Session"></a>
-<a class="hotspot hero-book" href="https://TheAlignedCollective.as.me/Maxine" target="_blank" rel="noopener" aria-label="Book a Session"></a>
+  <a class="hit top-book" href="https://TheAlignedCollective.as.me/Maxine" target="_blank" rel="noopener" aria-label="Book a Session"></a>
+  <a class="hit hero-book" href="https://TheAlignedCollective.as.me/Maxine" target="_blank" rel="noopener" aria-label="Book a Session"></a>
 
-<section class="contact-row" aria-label="Contact Four Crows Holistic Healing">
- <div class="contact-item">
-   <a href="https://TheAlignedCollective.as.me/Maxine" target="_blank" rel="noopener">
-    <div class="icon">▦</div><h3>Book a Session</h3><p>Schedule online</p>
-   </a>
- </div>
- <div class="contact-item">
-   <a href="tel:5853147905">
-    <div class="icon">☎</div><h3>Call Me</h3><p>585-314-7905</p>
-   </a>
- </div>
- <div class="contact-item">
-   <a href="mailto:mc1436@aol.com">
-    <div class="icon">✉</div><h3>Email Me</h3><p>mc1436@aol.com</p>
-   </a>
- </div>
-</section>
+  <a class="hit bottom-book" href="https://TheAlignedCollective.as.me/Maxine" target="_blank" rel="noopener" aria-label="Book a Session"></a>
+  <a class="hit phone" href="tel:5853147905" aria-label="Call 585-314-7905"></a>
+  <a class="hit email" href="mailto:mc1436@aol.com" aria-label="Email Four Crows Holistic Healing"></a>
 
-<footer class="footer">
- <div class="copyright">© 2026 Four Crows Holistic Healing · All Rights Reserved</div>
- <div class="socials" aria-label="Social media">
-  <a class="social" href="https://www.facebook.com/profile.php?id=61593364600948" target="_blank" rel="noopener" aria-label="Facebook">f</a>
-  <a class="social ig" href="https://www.instagram.com/fourcrows.h.h/" target="_blank" rel="noopener" aria-label="Instagram">◎</a>
-  <a class="social tt" href="https://www.tiktok.com/@fourcrows.h.h" target="_blank" rel="noopener" aria-label="TikTok">♪</a>
-  <a class="social yt" href="https://www.youtube.com/@fourcrowsholistichealing" target="_blank" rel="noopener" aria-label="YouTube">▶</a>
- </div>
-</footer>
+  <a class="hit facebook" href="https://www.facebook.com/profile.php?id=61593364600948" target="_blank" rel="noopener" aria-label="Facebook"></a>
+  <a class="hit instagram" href="https://www.instagram.com/fourcrows.h.h/" target="_blank" rel="noopener" aria-label="Instagram"></a>
+  <a class="hit tiktok" href="https://www.tiktok.com/@fourcrows.h.h" target="_blank" rel="noopener" aria-label="TikTok"></a>
+  <a class="hit youtube" href="https://www.youtube.com/@fourcrowsholistichealing" target="_blank" rel="noopener" aria-label="YouTube"></a>
 </div>
 </body>
 </html>
