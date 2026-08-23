@@ -5,164 +5,91 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Four Crows Holistic Healing">
 <title>Four Crows Holistic Healing</title>
-
 <style>
-html, body {
-  margin: 0;
-  padding: 0;
-  background: #f7f1eb;
+html,body{
+  margin:0;
+  padding:0;
+  background:#f7f1eb;
 }
-
-.page {
-  position: relative;
-  width: min(100%, 1024px);
-  margin: 0 auto;
-  line-height: 0;
+.page{
+  position:relative;
+  width:min(100%,1024px);
+  margin:0 auto;
 }
-
-.page img {
-  display: block;
-  width: 100%;
-  height: auto;
+.page-image{
+  display:block;
+  width:100%;
+  height:auto;
 }
-
-.hit {
-  position: absolute;
-  display: block;
-  z-index: 10;
-  background: transparent;
-  border-radius: 999px;
+.link-map{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  z-index:10;
 }
-
-.hit:focus-visible {
-  outline: 2px solid #654886;
-  outline-offset: 2px;
+.link-map a{
+  cursor:pointer;
 }
-
-/* Main booking buttons */
-.top-book {
-  left: 81.5%;
-  top: 2.0%;
-  width: 16%;
-  height: 3.3%;
+.link-map .target{
+  fill:transparent;
+  stroke:transparent;
 }
-
-.hero-book {
-  left: 39.0%;
-  top: 31.2%;
-  width: 22%;
-  height: 3.8%;
-}
-
-/* Footer contact panel */
-.bottom-book {
-  left: 51.5%;
-  top: 79.5%;
-  width: 15%;
-  height: 8%;
-}
-
-.phone-link {
-  left: 67.0%;
-  top: 79.5%;
-  width: 14%;
-  height: 8%;
-}
-
-.email-link {
-  left: 82.0%;
-  top: 79.5%;
-  width: 16%;
-  height: 8%;
-}
-
-/* Click directly on the four visible icons in the sage footer */
-.facebook {
-  left: 68.4%;
-  top: 93.3%;
-  width: 6%;
-  height: 4.8%;
-}
-
-.instagram {
-  left: 75.3%;
-  top: 93.3%;
-  width: 6%;
-  height: 4.8%;
-}
-
-.tiktok {
-  left: 82.2%;
-  top: 93.3%;
-  width: 6%;
-  height: 4.8%;
-}
-
-.youtube {
-  left: 89.1%;
-  top: 93.3%;
-  width: 6%;
-  height: 4.8%;
+.link-map a:focus .target{
+  stroke:#5c3f7e;
+  stroke-width:3;
 }
 </style>
 </head>
-
 <body>
 
 <div class="page">
+  <img class="page-image" src="site-design.png" alt="Four Crows Holistic Healing">
 
-  <img src="site-design.png" alt="Four Crows Holistic Healing">
+  <svg class="link-map" viewBox="0 0 1024 1536" preserveAspectRatio="none"
+       xmlns="http://www.w3.org/2000/svg">
 
-  <a class="hit top-book"
-     href="https://TheAlignedCollective.as.me/Maxine"
-     target="_blank"
-     rel="noopener"
-     aria-label="Book a Session"></a>
+    <!-- Book a Session: top -->
+    <a href="https://TheAlignedCollective.as.me/Maxine" target="_blank" rel="noopener">
+      <rect class="target" x="833" y="39" width="165" height="55" rx="26"/>
+    </a>
 
-  <a class="hit hero-book"
-     href="https://TheAlignedCollective.as.me/Maxine"
-     target="_blank"
-     rel="noopener"
-     aria-label="Book a Session"></a>
+    <!-- Book a Session: hero -->
+    <a href="https://TheAlignedCollective.as.me/Maxine" target="_blank" rel="noopener">
+      <rect class="target" x="402" y="480" width="224" height="56" rx="28"/>
+    </a>
 
-  <a class="hit bottom-book"
-     href="https://TheAlignedCollective.as.me/Maxine"
-     target="_blank"
-     rel="noopener"
-     aria-label="Book a Session"></a>
+    <!-- Bottom contact actions -->
+    <a href="https://TheAlignedCollective.as.me/Maxine" target="_blank" rel="noopener">
+      <rect class="target" x="505" y="1360" width="157" height="130" rx="8"/>
+    </a>
 
-  <a class="hit phone-link"
-     href="tel:5853147905"
-     aria-label="Call 585-314-7905"></a>
+    <a href="tel:5853147905">
+      <rect class="target" x="665" y="1360" width="145" height="130" rx="8"/>
+    </a>
 
-  <a class="hit email-link"
-     href="mailto:mc1436@aol.com"
-     aria-label="Email Four Crows Holistic Healing"></a>
+    <a href="mailto:mc1436@aol.com">
+      <rect class="target" x="812" y="1360" width="180" height="130" rx="8"/>
+    </a>
 
-  <a class="hit facebook"
-     href="https://www.facebook.com/profile.php?id=61593364600948"
-     target="_blank"
-     rel="noopener"
-     aria-label="Facebook"></a>
+    <!-- Footer social icons: exact pixel positions -->
+    <a href="https://www.facebook.com/profile.php?id=61593364600948" target="_blank" rel="noopener">
+      <circle class="target" cx="805" cy="1517" r="19"/>
+    </a>
 
-  <a class="hit instagram"
-     href="https://www.instagram.com/fourcrows.h.h/"
-     target="_blank"
-     rel="noopener"
-     aria-label="Instagram"></a>
+    <a href="https://www.instagram.com/fourcrows.h.h/" target="_blank" rel="noopener">
+      <circle class="target" cx="858" cy="1517" r="19"/>
+    </a>
 
-  <a class="hit tiktok"
-     href="https://www.tiktok.com/@fourcrows.h.h"
-     target="_blank"
-     rel="noopener"
-     aria-label="TikTok"></a>
+    <a href="https://www.tiktok.com/@fourcrows.h.h" target="_blank" rel="noopener">
+      <circle class="target" cx="911" cy="1517" r="19"/>
+    </a>
 
-  <a class="hit youtube"
-     href="https://www.youtube.com/@fourcrowsholistichealing"
-     target="_blank"
-     rel="noopener"
-     aria-label="YouTube"></a>
+    <a href="https://www.youtube.com/@fourcrowsholistichealing" target="_blank" rel="noopener">
+      <circle class="target" cx="964" cy="1517" r="19"/>
+    </a>
 
+  </svg>
 </div>
 
 </body>
