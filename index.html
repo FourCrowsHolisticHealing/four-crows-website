@@ -6,38 +6,74 @@
 <meta name="description" content="Four Crows Holistic Healing">
 <title>Four Crows Holistic Healing</title>
 <style>
-html,body{
-  margin:0;
-  padding:0;
-  background:#f7f1eb;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #aab196;
+  min-height: 100%;
 }
-.page{
-  position:relative;
-  width:min(100%,1024px);
-  margin:0 auto;
+
+body {
+  overflow-x: hidden;
 }
-.page-image{
-  display:block;
-  width:100%;
-  height:auto;
+
+.page {
+  position: relative;
+  width: min(100%, 1024px);
+  margin: 0 auto;
 }
-.link-map{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  z-index:10;
+
+.page-image {
+  display: block;
+  width: 100%;
+  height: auto;
 }
-.link-map a{
-  cursor:pointer;
+
+.link-map {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
 }
-.link-map .target{
-  fill:transparent;
-  stroke:transparent;
+
+.link-map a {
+  cursor: pointer;
 }
-.link-map a:focus .target{
-  stroke:#5c3f7e;
-  stroke-width:3;
+
+.link-map .target {
+  fill: transparent;
+  stroke: transparent;
+}
+
+.link-map a:focus .target {
+  stroke: #5c3f7e;
+  stroke-width: 3;
+}
+
+/* PHONE VERSION */
+@media screen and (max-width: 600px) {
+
+  html,
+  body {
+    background: #aab196;
+    min-height: 100vh;
+    min-height: 100svh;
+  }
+
+  .page {
+    width: 150vw;
+    max-width: none;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+  }
+
+  .page-image {
+    width: 100%;
+    height: auto;
+  }
 }
 </style>
 </head>
