@@ -4,209 +4,95 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Four Crows Holistic Healing</title>
-
 <style>
-html { scroll-behavior: smooth; }
+*{box-sizing:border-box}
+body{margin:0;background:#f7f1eb;font-family:Arial,Helvetica,sans-serif;color:#2f2933}
+.page{position:relative;width:min(100%,1024px);margin:0 auto}
+.bg{display:block;width:100%;height:auto}
+a{text-decoration:none;color:inherit}
+.hotspot{position:absolute;display:block;z-index:5;background:transparent}
+.top-book{left:81.5%;top:2%;width:16%;height:3.3%}
+.hero-book{left:39%;top:31.2%;width:22%;height:3.8%}
 
-body {
-  margin: 0;
-  background: #f7f1eb;
-  font-family: Arial, Helvetica, sans-serif;
+/* Contact/footer rebuilt as real HTML */
+.contact-row{
+ position:absolute; left:0; width:100%; top:78.767943%;
+ height:15.610048%; display:grid; grid-template-columns:repeat(3,1fr);
+ align-items:center; text-align:center; line-height:1.2;
 }
-
-.site-wrap {
-  width: min(100%, 1024px);
-  margin: 0 auto;
-  background: #f7f1eb;
+.contact-item{padding:12px 18px}
+.icon{
+ width:64px;height:64px;border-radius:50%;margin:0 auto 15px;
+ display:flex;align-items:center;justify-content:center;color:#fff;
+ background:#64498a;font-size:30px;
 }
+.contact-item:nth-child(2) .icon{background:#758665}
+.contact-item h3{margin:0 0 12px;font-family:Georgia,serif;color:#49306f;font-size:28px;font-weight:500}
+.contact-item p{margin:0;font-size:18px}
+.contact-item a:hover{text-decoration:underline}
 
-.design-wrap {
-  position: relative;
+.footer{
+ position:absolute;left:0;bottom:0;width:100%;height:5.622010%;
+ display:flex;align-items:center;justify-content:space-between;padding:0 38px;
+ line-height:1.2;
 }
-
-.design-wrap img {
-  width: 100%;
-  height: auto;
-  display: block;
+.copyright{font-family:Georgia,serif;font-size:16px;color:#332f33}
+.socials{display:flex;gap:16px}
+.social{
+ width:43px;height:43px;border:2px solid #5e3f82;border-radius:50%;
+ display:flex;align-items:center;justify-content:center;color:#5e3f82;
+ background:rgba(255,255,255,.08);font-weight:bold;font-size:21px
 }
+.social:hover{background:#5e3f82;color:white}
+.ig{font-size:22px} .tt{font-size:19px} .yt{font-size:17px}
 
-.hotspot {
-  position: absolute;
-  display: block;
-  z-index: 5;
-  background: transparent;
-}
-
-/* Clickable booking/contact areas */
-.top-book {
-  left: 81.5%;
-  top: 2.0%;
-  width: 16%;
-  height: 3.3%;
-}
-
-.hero-book {
-  left: 39%;
-  top: 31.2%;
-  width: 22%;
-  height: 3.8%;
-}
-
-.bottom-book {
-  left: 50%;
-  top: 88.6%;
-  width: 15%;
-  height: 5.5%;
-}
-
-.phone-link {
-  left: 65%;
-  top: 88.6%;
-  width: 14%;
-  height: 5.5%;
-}
-
-.email-link {
-  left: 79%;
-  top: 88.6%;
-  width: 18%;
-  height: 5.5%;
-}
-
-/* Cover the old baked-in footer icons only */
-.old-icons-cover {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 29%;
-  height: 3.6%;
-  background: #aab29a;
-  z-index: 7;
-}
-
-/* Real clickable icons, lowered and aligned */
-.social-icons {
-  position: absolute;
-  right: 4.5%;
-  bottom: 0.45%;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  z-index: 9;
-}
-
-.social-link {
-  width: 30px;
-  height: 30px;
-  border: 1.5px solid #624783;
-  border-radius: 50%;
-  background: #f8f3eb;
-  color: #624783;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: bold;
-  line-height: 1;
-  box-shadow: 0 1px 4px rgba(70,55,80,.08);
-}
-
-.social-link:hover,
-.social-link:focus {
-  background: #624783;
-  color: white;
-}
-
-.instagram { font-size: 17px; font-weight: 500; }
-.tiktok { font-size: 15px; }
-.youtube { font-size: 13px; }
-
-@media (max-width: 600px) {
-  .social-icons {
-    right: 3%;
-    gap: 5px;
-    bottom: 0.35%;
-  }
-
-  .social-link {
-    width: 24px;
-    height: 24px;
-    font-size: 12px;
-  }
-
-  .instagram { font-size: 14px; }
-  .tiktok { font-size: 12px; }
-  .youtube { font-size: 11px; }
+@media(max-width:650px){
+ .icon{width:44px;height:44px;font-size:22px;margin-bottom:8px}
+ .contact-item{padding:5px}
+ .contact-item h3{font-size:15px;margin-bottom:5px}
+ .contact-item p{font-size:10px}
+ .footer{padding:0 12px}
+ .copyright{font-size:9px}
+ .socials{gap:6px}
+ .social{width:27px;height:27px;font-size:13px}
+ .ig{font-size:14px} .tt{font-size:12px} .yt{font-size:11px}
 }
 </style>
 </head>
-
 <body>
+<div class="page">
+<img class="bg" src="site-design-footer-bg.jpg" alt="Four Crows Holistic Healing">
 
-<div class="site-wrap">
+<a class="hotspot top-book" href="https://TheAlignedCollective.as.me/Maxine" target="_blank" rel="noopener" aria-label="Book a Session"></a>
+<a class="hotspot hero-book" href="https://TheAlignedCollective.as.me/Maxine" target="_blank" rel="noopener" aria-label="Book a Session"></a>
 
-  <div class="design-wrap">
+<section class="contact-row" aria-label="Contact Four Crows Holistic Healing">
+ <div class="contact-item">
+   <a href="https://TheAlignedCollective.as.me/Maxine" target="_blank" rel="noopener">
+    <div class="icon">▦</div><h3>Book a Session</h3><p>Schedule online</p>
+   </a>
+ </div>
+ <div class="contact-item">
+   <a href="tel:5853147905">
+    <div class="icon">☎</div><h3>Call Me</h3><p>585-314-7905</p>
+   </a>
+ </div>
+ <div class="contact-item">
+   <a href="mailto:mc1436@aol.com">
+    <div class="icon">✉</div><h3>Email Me</h3><p>mc1436@aol.com</p>
+   </a>
+ </div>
+</section>
 
-    <img src="site-design.png" alt="Four Crows Holistic Healing website">
-
-    <a class="hotspot top-book"
-       href="https://TheAlignedCollective.as.me/Maxine"
-       target="_blank"
-       rel="noopener"
-       aria-label="Book a Session"></a>
-
-    <a class="hotspot hero-book"
-       href="https://TheAlignedCollective.as.me/Maxine"
-       target="_blank"
-       rel="noopener"
-       aria-label="Book a Session"></a>
-
-    <a class="hotspot bottom-book"
-       href="https://TheAlignedCollective.as.me/Maxine"
-       target="_blank"
-       rel="noopener"
-       aria-label="Book a Session"></a>
-
-    <a class="hotspot phone-link"
-       href="tel:5853147905"
-       aria-label="Call 585-314-7905"></a>
-
-    <a class="hotspot email-link"
-       href="mailto:mc1436@aol.com"
-       aria-label="Email Four Crows Holistic Healing"></a>
-
-    <div class="old-icons-cover" aria-hidden="true"></div>
-
-    <div class="social-icons">
-      <a class="social-link"
-         href="https://www.facebook.com/profile.php?id=61593364600948"
-         target="_blank"
-         rel="noopener"
-         aria-label="Facebook">f</a>
-
-      <a class="social-link instagram"
-         href="https://www.instagram.com/fourcrows.h.h/"
-         target="_blank"
-         rel="noopener"
-         aria-label="Instagram">◎</a>
-
-      <a class="social-link tiktok"
-         href="https://www.tiktok.com/@fourcrows.h.h"
-         target="_blank"
-         rel="noopener"
-         aria-label="TikTok">♪</a>
-
-      <a class="social-link youtube"
-         href="https://www.youtube.com/@fourcrowsholistichealing"
-         target="_blank"
-         rel="noopener"
-         aria-label="YouTube">▶</a>
-    </div>
-
-  </div>
-
+<footer class="footer">
+ <div class="copyright">© 2026 Four Crows Holistic Healing · All Rights Reserved</div>
+ <div class="socials" aria-label="Social media">
+  <a class="social" href="https://www.facebook.com/profile.php?id=61593364600948" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+  <a class="social ig" href="https://www.instagram.com/fourcrows.h.h/" target="_blank" rel="noopener" aria-label="Instagram">◎</a>
+  <a class="social tt" href="https://www.tiktok.com/@fourcrows.h.h" target="_blank" rel="noopener" aria-label="TikTok">♪</a>
+  <a class="social yt" href="https://www.youtube.com/@fourcrowsholistichealing" target="_blank" rel="noopener" aria-label="YouTube">▶</a>
+ </div>
+</footer>
 </div>
-
 </body>
 </html>
